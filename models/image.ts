@@ -13,7 +13,7 @@ const PhotoSchema = z.object({
   width: z.number(),
   height: z.number(),
   url: z.string(),
-  source: z.object({
+  src: z.object({
     large: z.string(),
   }),
   alt: z.string(),
@@ -26,4 +26,4 @@ export const ImagesSchemaWithPhotos = BasicImageSchema.extend({
 
 export type Photo = z.infer<typeof PhotoSchema>
 
-export type ImageResults = z.infer<typeof ImagesSchemaWithPhotos>
+export type ImagesResults = z.infer<typeof ImagesSchemaWithPhotos>
